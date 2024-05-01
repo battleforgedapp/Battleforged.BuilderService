@@ -395,4 +395,12 @@ FodyWeavers.xsd
 *.msp
 
 # JetBrains Rider
+.idea/
 *.sln.iml
+
+# Remove LocalDb Files
+*.db
+*.db-*
+
+# Mac Files
+.DS_STORE

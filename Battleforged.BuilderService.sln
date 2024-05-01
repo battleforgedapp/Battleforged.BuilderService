@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Battleforged.BuilderService", "Battleforged.BuilderService\Battleforged.BuilderService.csproj", "{F0F1B047-1156-4495-A3E5-07DF5C94CB57}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Battleforged.BuilderService.Application", "Battleforged.BuilderService.Application\Battleforged.BuilderService.Application.csproj", "{40C02690-C2A5-48E3-A2EB-E1F2767BE252}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Battleforged.BuilderService.Domain", "Battleforged.BuilderService.Domain\Battleforged.BuilderService.Domain.csproj", "{2D98990B-1AEB-4211-8A89-CA52EF2E9D43}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Battleforged.BuilderService.Infrastructure", "Battleforged.BuilderService.Infrastructure\Battleforged.BuilderService.Infrastructure.csproj", "{7299080D-3F77-437D-8DE9-C526B0A6EC2C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F0F1B047-1156-4495-A3E5-07DF5C94CB57}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F0F1B047-1156-4495-A3E5-07DF5C94CB57}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F0F1B047-1156-4495-A3E5-07DF5C94CB57}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F0F1B047-1156-4495-A3E5-07DF5C94CB57}.Release|Any CPU.Build.0 = Release|Any CPU
+		{40C02690-C2A5-48E3-A2EB-E1F2767BE252}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{40C02690-C2A5-48E3-A2EB-E1F2767BE252}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{40C02690-C2A5-48E3-A2EB-E1F2767BE252}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{40C02690-C2A5-48E3-A2EB-E1F2767BE252}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2D98990B-1AEB-4211-8A89-CA52EF2E9D43}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D98990B-1AEB-4211-8A89-CA52EF2E9D43}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2D98990B-1AEB-4211-8A89-CA52EF2E9D43}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D98990B-1AEB-4211-8A89-CA52EF2E9D43}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7299080D-3F77-437D-8DE9-C526B0A6EC2C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7299080D-3F77-437D-8DE9-C526B0A6EC2C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7299080D-3F77-437D-8DE9-C526B0A6EC2C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7299080D-3F77-437D-8DE9-C526B0A6EC2C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
