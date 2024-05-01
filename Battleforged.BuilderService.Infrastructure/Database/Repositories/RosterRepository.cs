@@ -27,6 +27,9 @@ public sealed class RosterRepository(IDbContextFactory<AppDbContext> ctx) : IRos
         await _ctx.DisposeAsync();
     }
 
+    public async Task<Roster?> GetRosterByIdAsync(Guid rosterId, CancellationToken ct = default)
+        => await _ctx.Rosters.FirstOrDefaultAsync(x => x.Id == rosterId, ct);
+
     public void Update(Roster entity) {
         _ctx.Rosters.Update(entity);
         _ctx.SaveChanges();

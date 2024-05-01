@@ -1,5 +1,7 @@
 using System.Security.Claims;
 using Battleforged.BuilderService.Domain.Repositories;
+using Battleforged.BuilderService.Graph.Nodes;
+using Battleforged.BuilderService.Graph.Queries;
 using Battleforged.BuilderService.Helpers;
 using Battleforged.BuilderService.Infrastructure.Database;
 using Battleforged.BuilderService.Infrastructure.Database.Repositories;
@@ -85,7 +87,9 @@ var builder = WebApplication.CreateBuilder(args);
         .RegisterDbContext<AppDbContext>()
         .AddAuthorization()
         .AddSorting()
-        .AddQueryType(q => q.Name("Query"));
+        .AddQueryType(q => q.Name("Query"))
+        .AddType<RosterQueries>()
+        .AddTypeExtension<RosterNodes>();
 }
 
 var app = builder.Build();
@@ -96,18 +100,18 @@ var app = builder.Build();
     app.UseAuthorization();
     app.UseCors();
     app.UseEndpoints(e => {
-        e.MapGraphQL(); //.RequireAuthorization();
-        e.MapFastEndpoints(cfg => {
-            cfg.Versioning.Prefix = "v";
-            cfg.Serializer.ResponseSerializer = (rsp, dto, cType, jCtx, ct) => {
-                rsp.ContentType = cType;
-                return rsp.WriteAsync(JsonConvert.SerializeObject(dto), ct);
-            };
-            cfg.Serializer.RequestDeserializer = async (req, tDto, jCtx, ct) => {
-                using var reader = new StreamReader(req.Body);
-                return JsonConvert.DeserializeObject(await reader.ReadToEndAsync(), tDto);
-            };
-        });
+        e.MapGraphQL();
+        // e.MapFastEndpoints(cfg => {
+        //     cfg.Versioning.Prefix = "v";
+        //     cfg.Serializer.ResponseSerializer = (rsp, dto, cType, jCtx, ct) => {
+        //         rsp.ContentType = cType;
+        //         return rsp.WriteAsync(JsonConvert.SerializeObject(dto), ct);
+        //     };
+        //     cfg.Serializer.RequestDeserializer = async (req, tDto, jCtx, ct) => {
+        //         using var reader = new StreamReader(req.Body);
+        //         return JsonConvert.DeserializeObject(await reader.ReadToEndAsync(), tDto);
+        //     };
+        // });
     });
 }
 
